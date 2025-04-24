@@ -1,0 +1,27 @@
+# Django y DRF
+django==4.2.7
+djangorestframework==3.14.0
+
+# Base de datos MySQL
+mysqlclient==2.1.1
+
+# Autenticación y seguridad
+django-cors-headers==4.2.0
+dj-rest-auth==4.0.0
+djangorestframework-simplejwt==5.2.2
+
+# Documentación de la API
+drf-yasg==1.21.4
+drf-spectacular==0.26.4
+
+# Herramientas de desarrollo
+django-debug-toolbar==4.2.0
+django-environ==0.10.0
+
+# Filtros y validación
+django-filter==23.2
+pytz==2023.3
+
+# Manejo de imágenes y utilidades
+Pillow==10.0.1
+requests==2.31.0
