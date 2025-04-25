@@ -44,7 +44,7 @@ THIRD_APPS = [
 ]
 
 MY_APPS = [
-    'usuarios',
+    'usuarios', # nombre app django
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_APPS + MY_APPS
@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'usuarios.urls'
+ROOT_URLCONF = 'usuarios.Urls.urls'
 
 TEMPLATES = [
     {

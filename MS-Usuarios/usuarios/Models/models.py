@@ -1,6 +1,6 @@
 from django.db import models
 from django.db.models.deletion import RESTRICT, CASCADE
-from .querysets import ListarUsuarios
+from usuarios.Querysets.querysets import ListarUsuarios
 
 
 class TiposUsuarios(models.Model):

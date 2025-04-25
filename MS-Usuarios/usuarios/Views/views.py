@@ -1,9 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import TiposUsuarios, Usuarios
-from .serializers import TiposUsuariosSerializer, UsuariosSerializer
-from .querysets import ListarUsuarios
+from usuarios.Models.models import TiposUsuarios, Usuarios
+from usuarios.Serializers.serializers import TiposUsuariosSerializer, UsuariosSerializer
+from usuarios.Querysets.querysets import ListarUsuarios
 
 
 class TiposUsuariosView(APIView):

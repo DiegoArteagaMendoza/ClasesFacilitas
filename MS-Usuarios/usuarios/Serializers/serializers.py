@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import TiposUsuarios, Usuarios
+from usuarios.Models.models import TiposUsuarios, Usuarios
 
 class TiposUsuariosSerializer(serializers.Serializer):
     """
