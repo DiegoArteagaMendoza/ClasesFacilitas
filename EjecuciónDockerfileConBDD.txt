@@ -1,0 +1,30 @@
+1. Crear una red docker personalizada
+docker network create <my-network>
+
+2. Conectar el contenedor de la bdd a la red
+docker network connect <my-network> <nombre del contenedor bdd>
+
+3. Construir la imagen django del microservicio importante el punto al final
+docker build -t <nombre de la imagen> .
+
+4. Ejecutar el contenedor de django
+docker run --name <nombre del contenedor> --network <my-network> -p 8000:8000 -d <nombre de la imagen>
+
+-------------------------------------------------------------------------------------
+
+Es importante conciderar que hay que hacer esto en la carpeta del microservicio, ademas que el contenedor de la bdd debe estar en ejecución y la configuración de la bdd en settings.py debe set 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',  # Motor de base de datos
+        'NAME': 'usuarios',   # Nombre de la base de datos
+        'USER': 'root',            # Usuario de MySQL
+        'PASSWORD': 'secret',     # Contraseña de MySQL
+        'HOST': 'cf-user-mysql-db',                   # Dirección del servidor MySQL
+        'PORT': '3306', # Puerto por defecto de mysql
+    }
+}
+
+-------------------------------------------------------------------------------------
+
+Esto se debe hacer una ves el desarrollo del microservicio este terminado, para que se dockerice.
